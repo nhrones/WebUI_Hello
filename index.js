@@ -26,6 +26,11 @@ function startCheck() {
   });
 }
 
+// called from from hello_world.ts: line 46 
+function closeLogger() {
+   webui.setLogging(false);
+}
+
 // after loading dom and webui.js, I like to enable logging
 addEventListener("DOMContentLoaded", (_event) => {
    if (typeof webui !== 'undefined') {
