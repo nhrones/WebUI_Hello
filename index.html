@@ -36,28 +36,8 @@
         B: <input id="MyInputB" value="6"><br><br>
         <div id="Result" style="color: #dbdd52">Result: ?</div><br><br>
 	    <button id="calculate">Calculate</button> - <button OnClick="startCheck()">Check Result</button> - <button id="exit">Exit</button>
-        <script>
-            let Res = 0;
+        <script src="./index.js">
 
-            function get_A() {
-              return parseInt(document.getElementById('MyInputA').value);
-            }
-
-            function get_B() {
-              return parseInt(document.getElementById('MyInputB').value);
-            }
-
-            function set_result(res) {
-              Res = res;
-              document.getElementById("Result").innerHTML = 'Result: ' + Res;
-            }
-
-            function startCheck() {
-              // Call Deno backend function and pass arguments
-              checkResult(get_A(), get_B(), Res).then((response) => {
-                alert(response);
-              });
-            }
         </script>
     </body>    
 </html>
